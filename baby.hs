@@ -23,3 +23,4 @@ strToInt = read "42" :: Int
 
 -- Int to String
 intToStr = show 42
+
