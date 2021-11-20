@@ -1,2 +1,11 @@
-fizzBuzz xs = [ if mod x 3 == 0 then "Fizz" else if mod x 5 == 0 then "Buzz" else show x | x <- xs]
-fizzBuzz [1..100]
+
+fizzBuzz :: Int -> String
+fizzBuzz x
+    | mod x 3 == 0 && mod x 5 == 0 = "FizzBuzz"
+    | mod x 3 == 0 = "Fizz"
+    | mod x 5 == 0 = "Buzz"
+    | otherwise = show x
+
+printFizzBuzz = mapM_ putStrLn [fizzBuzz x | x <- [1..100]]
+
+
